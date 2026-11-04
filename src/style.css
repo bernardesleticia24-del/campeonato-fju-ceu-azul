@@ -1,0 +1,918 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* CONFIGURAÇÕES GERAIS */
+
+:root {
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  background: #061326;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  background: #061326;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  transition: 0.3s;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+  width: 100%;
+  min-height: 85px;
+  padding: 18px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  background: #081a31;
+  border-bottom: 1px solid #17365b;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.logo-fju {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 38px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.logo-texto {
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #8ebfff;
+}
+
+.menu {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  color: #d8e5f5;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.menu a:hover {
+  color: #35a6ff;
+}
+
+/* DESTAQUE INICIAL */
+
+.inicio {
+  min-height: 620px;
+  padding: 90px 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 45px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 80% 50%, #123e70 0%, transparent 45%),
+    linear-gradient(120deg, #061326, #0a2443);
+}
+
+.conteudo-inicio {
+  max-width: 650px;
+  position: relative;
+  z-index: 2;
+}
+
+.etiqueta {
+  display: inline-block;
+  color: #39aaff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(65px, 9vw, 115px);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -2px;
+}
+
+h1 span {
+  color: #269aff;
+}
+
+.subtitulo {
+  max-width: 450px;
+  margin-top: 25px;
+  color: #bdcde0;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.informacoes {
+  display: flex;
+  gap: 45px;
+  margin-top: 38px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.informacoes div {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.informacoes span {
+  color: #70baff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.informacoes strong {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.botao {
+  display: inline-block;
+  padding: 16px 25px;
+  background: #168cf0;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.botao:hover {
+  background: #ffffff;
+  color: #061326;
+  transform: translateY(-3px);
+}
+
+.destaque {
+  width: min(520px, 48%);
+  height: 380px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #328bd8;
+  border-radius: 8px;
+  box-shadow: 0 0 60px #168cf033;
+  background: #07172a;
+}
+
+.destaque img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.destaque .texto-destaque {
+  position: absolute;
+  bottom: 18px;
+  left: 15px;
+  padding: 8px 12px;
+  background: #061326cc;
+  border-radius: 3px;
+}
+
+.texto-destaque {
+  color: #65b7ff;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* SEÇÕES GERAIS */
+
+.sobre,
+.equipes,
+.jogos,
+.classificacao,
+.contato {
+  padding: 85px 8%;
+  text-align: center;
+}
+
+.sobre {
+  background: #0a1c33;
+}
+
+.equipes,
+.classificacao {
+  background: #061326;
+}
+
+.jogos {
+  background: #0a1c33;
+}
+
+.sobre h2,
+.equipes h2,
+.jogos h2,
+.classificacao h2,
+.contato h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 42px;
+  margin-bottom: 18px;
+}
+
+.sobre > p,
+.equipes > p,
+.descricao-jogos,
+.descricao-classificacao {
+  max-width: 650px;
+  margin: 0 auto 35px;
+  color: #b8c9dc;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* CARDS DO CAMPEONATO E EQUIPES */
+
+.cards-campeonato {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 40px auto 0;
+}
+
+.card-info {
+  padding: 30px 18px;
+  background: linear-gradient(145deg, #102b4b, #0a1c33);
+  border: 1px solid #1d4770;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.card-info:hover {
+  transform: translateY(-6px);
+  border-color: #269aff;
+  box-shadow: 0 10px 30px #168cf022;
+}
+
+.card-info > span {
+  font-size: 32px;
+}
+
+.card-info h3 {
+  margin: 18px 0 10px;
+  color: #39aaff;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.card-info p {
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.equipe-vazia {
+  max-width: 500px;
+  margin: 45px auto 0;
+  padding: 40px 20px;
+  background: linear-gradient(145deg, #102b4b, #0a1c33);
+  border: 1px solid #1d4770;
+  border-radius: 8px;
+}
+
+.equipe-vazia span {
+  font-size: 45px;
+}
+
+.equipe-vazia h3 {
+  margin: 18px 0 10px;
+  color: #39aaff;
+  font-size: 19px;
+}
+
+.equipe-vazia p {
+  color: #b8c9dc;
+  font-size: 13px;
+}
+
+/* JOGOS E RESULTADOS */
+
+.tabela-jogos,
+.tabela-classificacao {
+  width: 100%;
+  max-width: 1000px;
+  margin: 35px auto;
+  border: 1px solid #1d4770;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #071629;
+}
+
+.linha-jogo {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 22px 18px;
+  align-items: center;
+  border-bottom: 1px solid #17365b;
+  color: #d8e5f5;
+  font-size: 12px;
+}
+
+.linha-jogo:last-child {
+  border-bottom: none;
+}
+
+.cabecalho-jogo {
+  background: #12345a;
+  color: #55b4ff;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.linha-jogo strong {
+  color: #39aaff;
+  font-size: 14px;
+}
+
+/* CLASSIFICAÇÃO DA PÁGINA INICIAL */
+
+.linha-classificacao {
+  display: grid;
+  grid-template-columns: 0.7fr 2fr repeat(5, 0.7fr);
+  gap: 10px;
+  align-items: center;
+  padding: 19px 15px;
+  border-bottom: 1px solid #17365b;
+  color: #d8e5f5;
+  font-size: 12px;
+}
+
+.linha-classificacao:last-child {
+  border-bottom: none;
+}
+
+.topo-classificacao {
+  background: #12345a;
+  color: #55b4ff;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.linha-classificacao strong {
+  color: #39aaff;
+  font-size: 14px;
+}
+
+.legenda-classificacao {
+  margin: 20px 0 25px;
+  color: #7893b0;
+  font-size: 11px;
+}
+
+/* CONTATO E RODAPÉ */
+
+.contato {
+  background: #071629;
+}
+
+.contato p {
+  color: #b8c9dc;
+  font-size: 14px;
+}
+
+.contato a {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 15px 25px;
+  background: #168cf0;
+  color: white;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border-radius: 4px;
+}
+
+.contato a:hover {
+  background: white;
+  color: #061326;
+}
+
+footer {
+  padding: 25px;
+  text-align: center;
+  background: #04101e;
+  color: #7893b0;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+/* PAINEL ADMINISTRATIVO */
+
+.painel-admin {
+  min-height: 100vh;
+  background: #061326;
+  color: #ffffff;
+}
+
+.admin-cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 7%;
+  background: #091b32;
+  border-bottom: 1px solid #168cf0;
+}
+
+.admin-cabecalho .logo-fju {
+  color: #168cf0;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.admin-cabecalho p {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.admin-cabecalho a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.admin-cabecalho a:hover {
+  color: #39aaff;
+}
+
+.admin-conteudo {
+  padding: 55px 7%;
+}
+
+.admin-conteudo h1 {
+  font-size: 42px;
+  margin: 15px 0;
+}
+
+.admin-conteudo > p {
+  color: #aabbd0;
+  margin-bottom: 35px;
+}
+
+.admin-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.admin-card {
+  background: #0c2039;
+  border: 1px solid #1b4772;
+  border-radius: 10px;
+  padding: 28px;
+}
+
+.admin-card > span {
+  font-size: 32px;
+}
+
+.admin-card h2 {
+  margin: 15px 0 8px;
+  color: #ffffff;
+}
+
+.admin-card p {
+  color: #aabbd0;
+  line-height: 1.6;
+}
+
+.admin-card button {
+  margin-top: 15px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 5px;
+  background: #168cf0;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.admin-card button:hover {
+  background: #0872ce;
+}
+
+/* LISTA DE EQUIPES NO PAINEL */
+
+.admin-lista-equipes {
+  margin-top: 45px;
+}
+
+.admin-lista-equipes > h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.admin-lista-equipes > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.admin-lista-equipes .admin-card {
+  padding: 22px;
+}
+
+.admin-lista-equipes button {
+  margin: 15px 8px 0 0;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 5px;
+  background: #168cf0;
+  color: white;
+  font-weight: bold;
+}
+
+.admin-lista-equipes button:last-of-type {
+  background: #a93245;
+}
+
+.admin-lista-equipes button:hover {
+  filter: brightness(1.2);
+}
+
+.admin-lista-equipes [hidden] {
+  display: none;
+}
+
+/* FORMULÁRIO DE EQUIPES E PARTIDAS */
+
+.form-equipe,
+.form-partida {
+  width: 100%;
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 30px;
+  background: #0c2039;
+  border: 1px solid #1b4772;
+  border-radius: 10px;
+}
+
+.form-equipe h2,
+.form-partida h2 {
+  margin-bottom: 22px;
+  color: #ffffff;
+}
+
+.form-equipe label,
+.form-partida label {
+  display: block;
+  margin: 18px 0 8px;
+  color: #dce8f5;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.form-equipe input,
+.form-partida input,
+.form-partida select,
+.form-equipe select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #315477;
+  border-radius: 5px;
+  background: #07172a;
+  color: white;
+  outline: none;
+}
+
+.form-equipe input:focus,
+.form-partida input:focus,
+.form-partida select:focus,
+.form-equipe select:focus {
+  border-color: #168cf0;
+}
+
+.form-equipe input::placeholder,
+.form-partida input::placeholder {
+  color: #7893b0;
+}
+
+.form-partida select option {
+  background: #07172a;
+  color: white;
+}
+
+/* JOGADORES DO CADASTRO */
+
+.titulo-jogadores {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+.titulo-jogadores button,
+.remover-jogador {
+  padding: 10px 14px;
+  border: 1px solid #168cf0;
+  border-radius: 5px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.jogador-item {
+  display: grid;
+  grid-template-columns: 1fr 150px auto;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.jogador-item input {
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #315477;
+  border-radius: 5px;
+  background: #07172a;
+  color: white;
+}
+
+.remover-jogador {
+  border-color: #b83b49;
+  color: #ff9da5;
+}
+
+.botao-salvar {
+  width: 100%;
+  margin-top: 30px;
+  padding: 16px;
+  border: none;
+  border-radius: 5px;
+  background: #168cf0;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botao-salvar:hover {
+  background: #0872ce;
+}
+
+#mensagem-equipe,
+#mensagem-partida {
+  margin-top: 20px;
+  color: #75c6ff;
+  font-weight: bold;
+}
+
+/* LISTA DE PARTIDAS */
+
+.lista-partidas {
+  max-width: 1000px;
+  margin: 35px auto;
+}
+
+.card-partida {
+  margin-bottom: 18px;
+  padding: 24px;
+  background: #0c2039;
+  border: 1px solid #1b4772;
+  border-radius: 9px;
+}
+
+.card-partida h3 {
+  margin-bottom: 12px;
+  color: #39aaff;
+}
+
+.card-partida p {
+  margin: 8px 0;
+  color: #d8e5f5;
+}
+
+.card-partida button {
+  margin: 15px 8px 0 0;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background: #168cf0;
+  color: white;
+  font-weight: bold;
+}
+
+.card-partida button:last-child {
+  background: #a93245;
+}
+
+/* TABELAS DE ADMINISTRAÇÃO E CLASSIFICAÇÃO */
+
+#tabela-classificacao {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 25px;
+}
+
+#tabela-classificacao table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+  background: #071629;
+  border: 1px solid #1d4770;
+}
+
+#tabela-classificacao th,
+#tabela-classificacao td {
+  padding: 15px 12px;
+  text-align: center;
+  border-bottom: 1px solid #17365b;
+}
+
+#tabela-classificacao th {
+  background: #12345a;
+  color: #55b4ff;
+  font-size: 11px;
+}
+
+#tabela-classificacao td {
+  color: #d8e5f5;
+  font-size: 13px;
+}
+
+#tabela-classificacao td strong {
+  color: #39aaff;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1000px) {
+  .cabecalho {
+    flex-direction: column;
+    padding: 20px 5%;
+  }
+
+  .menu {
+    justify-content: center;
+  }
+
+  .inicio {
+    padding: 75px 7%;
+  }
+
+  .cards-campeonato {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .inicio {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .destaque {
+    width: 100%;
+    height: 250px;
+  }
+
+  .informacoes {
+    gap: 25px;
+  }
+
+  .sobre,
+  .equipes,
+  .jogos,
+  .classificacao,
+  .contato {
+    padding: 65px 6%;
+  }
+
+  .sobre h2,
+  .equipes h2,
+  .jogos h2,
+  .classificacao h2,
+  .contato h2 {
+    font-size: 34px;
+  }
+
+  .admin-cards,
+  .admin-lista-equipes > div {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-conteudo {
+    padding: 40px 5%;
+  }
+
+  .admin-conteudo h1 {
+    font-size: 30px;
+  }
+
+  .admin-cabecalho {
+    padding: 20px;
+  }
+
+  .form-equipe,
+  .form-partida {
+    padding: 20px;
+  }
+
+  .linha-jogo {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 18px 10px;
+  }
+
+  .linha-classificacao {
+    grid-template-columns: 0.6fr 1.5fr repeat(5, 0.6fr);
+    gap: 5px;
+    padding: 15px 5px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .cards-campeonato {
+    grid-template-columns: 1fr;
+  }
+
+  .menu {
+    gap: 12px;
+  }
+
+  .menu a {
+    font-size: 10px;
+  }
+
+  .informacoes {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .jogador-item {
+    grid-template-columns: 1fr;
+  }
+
+  .titulo-jogadores {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.botao-admin {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  color: #ffffff;
+  background: #1265b5;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.botao-admin:hover {
+  background: #258ee8;
+}
